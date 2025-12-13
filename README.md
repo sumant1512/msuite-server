@@ -18,12 +18,20 @@
 
 `python -m uvicorn app.main:app --reload`
 
-### Setup for team
+# Setup for team
 
-## Install
+### Install
 
 `poetry install`
 
-## Run project
+### Run project
 
 `poetry run uvicorn app.main:app --reload`
+
+### Healt check
+
+`http://127.0.0.1:8000/`
+
+### Swagger
+
+`http://127.0.0.1:8000/docs`
