@@ -1,12 +1,11 @@
 from fastapi import FastAPI
 from app.database import check_db_connection
 
-app = FastAPI()
-
+app = FastAPI(title="MSuite API")
 
 @app.on_event("startup")
-def startup_event():
-    check_db_connection()  # 🚨 If this fails → server won't start
+def startup():
+    check_db_connection()
 
 
 @app.get("/")

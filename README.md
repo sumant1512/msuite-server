@@ -1,37 +1,23 @@
-## Project Setup
+# Project Setup
 
-## Clone project
+## Steps
 
-## venv setup
+### Step 1: Clone
 
-`python -m venv venv`
+`git clone https://github.com/sumant1512/msuite-server.git`
 
-## Activate venv using command
-
-`venv\Scripts\activate`
-
-## Install packages using
-
-`pip install -r requirements.txt`
-
-## Run project command
-
-`python -m uvicorn app.main:app --reload`
-
-# Setup for team
-
-### Install
+### Step 2: Install
 
 `poetry install`
 
-### Run project
+### Step 3: Run project
 
 `poetry run uvicorn app.main:app --reload`
 
-### Healt check
+### Step 4: Healt check
 
 `http://127.0.0.1:8000/`
 
-### Swagger
+### Step 5: Swagger
 
 `http://127.0.0.1:8000/docs`
