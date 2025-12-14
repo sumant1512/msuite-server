@@ -1,14 +1,10 @@
-from sqlalchemy import String, Enum
+from sqlalchemy import String, Enum, ForeignKey, Boolean
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database import Base
+from app.core.database import Base
+from app.enums.user_role import UserRole
 import enum
 import uuid
 from sqlalchemy.dialects.postgresql import UUID
-
-class UserRole(enum.Enum):
-    SUPER_ADMIN = "SUPER_ADMIN"
-    AGENCY_ADMIN = "AGENCY_ADMIN"
-    ECOMMERCE = "ECOMMERCE"
 
 class User(Base):
     __tablename__ = "users"
