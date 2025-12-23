@@ -1,3 +1,4 @@
+from app.models.billing import Payment
 from sqlalchemy import String, Boolean, DateTime, Integer, ForeignKey, Enum, Numeric
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.dialects.postgresql import UUID, JSONB
@@ -69,6 +70,9 @@ class Agency(Base):
     )
     invoices: Mapped[List["Invoice"]] = relationship(
         "Invoice", back_populates="agency", cascade="all, delete-orphan"
+    )
+    payments: Mapped[List["Payment"]] = relationship(
+        "Payment", back_populates="agency", cascade="all, delete-orphan", overlaps="invoices"
     )
 
     def __repr__(self) -> str:

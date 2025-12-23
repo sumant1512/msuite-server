@@ -19,7 +19,7 @@ dependencies = [
     "passlib[bcrypt] (>=1.7.4,<2.0.0) ; python_version >= \"3.12\" and python_version < \"4.0\"",
     "python-multipart (>=0.0.21,<0.0.22)",
     "alembic (>=1.17.2,<2.0.0)",
-    "bcrypt (>=4.0.1,<5.0.0)",
+    "bcrypt (>=3.2.0,<4.0.0)",
     "email-validator (>=2.3.0,<3.0.0)",
     "httpx (>=0.28.1,<0.29.0)"
 ]
